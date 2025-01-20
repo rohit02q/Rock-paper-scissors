@@ -15,13 +15,19 @@ let isStart = false;
 const choices = ['Rock', 'Paper', 'Scissors'];
 
 function gen_com_choice() {
-  comimg.src = `assets/img/rock2.png`;
+  comimg.src = `https://i.ibb.co/Bqh0Bzg/rock2.png`;
 
   const y = choices[Math.floor(Math.random() * 3)];
   setTimeout(() => {
-
-    comimg.src = `assets/img/${y.toLowerCase()}2.png`;
-
+  if(y=="Paper"){
+    comimg.src = `https://i.ibb.co/8NZ48S2/Paper2.png`;
+  }
+  else if(y=="Scissors"){
+    comimg.src = `https://i.ibb.co/4NRTbhJ/Scissors2.png`;
+  }
+  else{
+    comimg.src = `https://i.ibb.co/Bqh0Bzg/rock2.png`;
+  }
   }, 1500)
   return y;
 
@@ -68,7 +74,7 @@ function checkwin(x, y) {
 
 if (!isStart) {
   Rock_box.addEventListener('click', () => {
-    user_choice.src = `assets/img/rock2.png`;
+    user_choice.src = `https://i.ibb.co/Bqh0Bzg/rock2.png`;
     winmsg.style.color = 'blueviolet';
     winmsg.innerText = 'Wait';
     if (isStart) return; 
@@ -79,14 +85,14 @@ if (!isStart) {
     checkwin(x, y);
     setTimeout(() => {
 
-      user_choice.src = `assets/img/rock2.png`;
+      user_choice.src = `https://i.ibb.co/Bqh0Bzg/rock2.png` ;
 
     }, 1500)
 
   });
 
   Paper_box.addEventListener('click', () => {
-    user_choice.src = `assets/img/rock2.png`;
+    user_choice.src = `https://i.ibb.co/Bqh0Bzg/rock2.png`;
     winmsg.style.color = 'blueviolet';
     winmsg.innerText = 'Wait';
     if (isStart) return;
@@ -97,13 +103,13 @@ if (!isStart) {
     checkwin(x, y);
     setTimeout(() => {
 
-      user_choice.src = `assets/img/paper2.png`;
+      user_choice.src = `https://i.ibb.co/8NZ48S2/Paper2.png`;
 
     }, 1500)
   });
 
   Scissors_box.addEventListener('click', () => {
-    user_choice.src = `assets/img/rock2.png`;
+    user_choice.src = `https://i.ibb.co/Bqh0Bzg/rock2.png`;
     winmsg.style.color = 'blueviolet';
     winmsg.innerText = 'Wait';
     if (isStart) return;
@@ -114,7 +120,7 @@ if (!isStart) {
     checkwin(x, y);
     setTimeout(() => {
 
-      user_choice.src = `assets/img/scissors2.png`;
+      user_choice.src = `https://i.ibb.co/4NRTbhJ/Scissors2.png`;
 
     }, 1500)
   });
