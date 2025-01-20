@@ -260,6 +260,7 @@ body {
   width: 100px;
   height: 100px;
   background-color: transparent;
+  cursor: pointer;
 }
 
 #pick-img {
