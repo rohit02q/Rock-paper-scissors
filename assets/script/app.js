@@ -12,6 +12,19 @@ let user_point = 0;
 let com_point = 0;
 let isStart = false;
 
+userScore.addEventListener("dblclick", 
+                           ()=>{
+      let user_point= prompt("Enter You Custom Score")
+            userScore.innerText= user_point;                
+                           });
+
+comScore.addEventListener("dblclick", 
+                           ()=>{
+      let com_point= prompt("Enter Custom Score")
+            comScore.innerText= com_point;                
+                           });
+
+
 const choices = ['Rock', 'Paper', 'Scissors'];
 
 function gen_com_choice() {
