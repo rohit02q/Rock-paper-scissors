@@ -12,19 +12,27 @@ let user_point = 0;
 let com_point = 0;
 let isStart = false;
 
-userScore.addEventListener("dblclick", 
-                           ()=>{
-      let user_point= prompt("Enter You Custom Score")
-            userScore.innerText= user_point;                
-                           });
+userScore.addEventListener("dblclick", () => {
+    let nus = prompt("Enter Your Custom Score");
+    if (nus === null || nus.trim() === "") {
+        // Agar prompt cancel karein ya blank string ho
+        alert("Invalid input!");
+    } else {
+        user_point = nus;
+        userScore.innerText = user_point;
+    }
+});
 
-comScore.addEventListener("dblclick", 
-                           ()=>{
-      let com_point= prompt("Enter Custom Score")
-            comScore.innerText= com_point;                
-                           });
-
-
+comScore.addEventListener("dblclick", () => {
+    let ncs = prompt("Enter Custom Score");
+    if (ncs === null || ncs.trim() === "") {
+        // Agar prompt cancel karein ya blank string ho
+        alert("Invalid input!");
+    } else {
+        com_point = ncs;
+        comScore.innerText = com_point;
+    }
+});
 const choices = ['Rock', 'Paper', 'Scissors'];
 
 function gen_com_choice() {
